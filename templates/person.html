@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Community Events Board</title>
+    </head>
+    <body>
+      <h1>Community Events Board</h1>
+      <p><a href="/index">Public events</a></p>
+      <div class="event-list">
+         
+          <ul>
+                {% for event in events %}
+                   <li> {{event.event}} - {{event.date}} {% if event.user%}({{event.user}}){% endif %}</li>
+           
+          {% endfor %}
+          </ul>
+      </div>
+
+    </body>
+</html>
